@@ -1,15 +1,14 @@
-// const apiUrl = `https://newsapi.org/v2/everything?q=${query}&from=2024-05-04&sortBy=popularity&apiKey=6f11f3c247ca46c0b864014b4e1eb5d
+// const apiUrl = `https://newsapi.org/v2/everything?q=${query}&from=2024-04-04&sortBy=publishedAt&apiKey=${apiKey}`;
 // const apiKey = "a79d97dfb5d14018a52fc3d8033084c8";
 import React, { useEffect, useRef, useState } from "react";
 import News from "./News";
 import "./NewsApp.css";
 
 function NewsApp() {
-  const apiKey = "a79d97dfb5d14018a52fc3d8033084c8";
+  const apiKey = "6f11f3c247ca46c0b864014b4e1eb5d1";
   const [newsList, setNewsList] = useState([]);
   const [query, setQuery] = useState("tesla");
-  const apiUrl = `https://newsapi.org/v2/everything?q=${query}&from=2024-04-04&sortBy=publishedAt&apiKey=${apiKey}`;
-  // const apiUrl = `https://newsapi.org/v2/everything?q=${query}&from=2022-11-09&sortBy=publishedAt&apiKey=${apiKey}`;
+  const apiUrl = `https://newsapi.org/v2/everything?q=${query}&from=2024-04-07&sortBy=publishedAt&apiKey=${apiKey}`;
 
   const queryInputRef = useRef(null);
 
@@ -58,13 +57,13 @@ function NewsApp() {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(2, 48%)",
+          gridTemplateColumns: "repeat(3, 33%)",
           justifyContent: "space-between",
           rowGap: "20px",
         }}
       >
-        {newsList.map((news) => {
-          return <News key={news.url} news={news} />;
+        {newsList?.map((news) => {
+         return <News key={news.url} news={news} />
         })}
       </div>
     </div>
