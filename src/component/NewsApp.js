@@ -55,13 +55,17 @@ function NewsApp() {
         </button>
       </form>
       <div className="news-container">
-       {newsList && newsList.length > 0 ? (
+       {
+         // newsList && newsList.length > 0 ?
+           
           newsList.map((news) => (
             <News key={news.url} news={news} />
           ))
-        ) : (
-          <p>No news found></p>
-        )}
+         
+  // : (
+  //         <p>No news found></p>
+  //       )
+          }
       </div>
     </div>
   );
