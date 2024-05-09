@@ -61,7 +61,7 @@ function NewsApp() {
           ))
         ) : (
           <p>No news found
-  <News key={news.url} news={news}</p>
+  <News key={news.url} news={news}/></p>
         )}
       </div>
     </div>
