@@ -60,7 +60,8 @@ function NewsApp() {
             <News key={news.url} news={news} />
           ))
         ) : (
-          <p>No news found</p>
+          <p>No news found
+  <News key={news.url} news={news}</p>
         )}
       </div>
     </div>
