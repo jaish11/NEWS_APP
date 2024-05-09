@@ -1,6 +1,6 @@
 
 .news-app {
-    width: 80%;
+    width: 90%;
     margin-inline: auto;
     margin-block: 40px;
 }
@@ -17,4 +17,9 @@
 .btn-submit {
     margin-bottom: 20px;
     padding: 20px 60px;
+}
+
+.news-container{
+    display: grid;
+    grid-template-columns: repeat(3,33%);
 }
